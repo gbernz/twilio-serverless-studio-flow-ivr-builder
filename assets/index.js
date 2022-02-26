@@ -69,16 +69,6 @@ function update_json(initialJSON){
     var pollyVoice = document.querySelector("select[id='input-voice']").value;
     var voiceGreeting = document.querySelector("input[id='input-voice-greeting']").value;
     var smsGreeting = document.querySelector("input[id='input-sms-greeting']").value;
-    var branch0 = document.querySelector("input[id='branch0']").value;
-    var branch1 = document.querySelector("input[id='branch1']").value;
-    var branch2 = document.querySelector("input[id='branch2']").value;
-    var branch3 = document.querySelector("input[id='branch3']").value;
-    var branch4 = document.querySelector("input[id='branch4']").value;
-    var branch5 = document.querySelector("input[id='branch5']").value;
-    var branch6 = document.querySelector("input[id='branch6']").value;
-    var branch7 = document.querySelector("input[id='branch7']").value;
-    var branch8 = document.querySelector("input[id='branch8']").value;
-    var branch9 = document.querySelector("input[id='branch9']").value;
     var branchNum = document.getElementById("branches").value;
     var phoneNumbers = [];
     if (phoneInput0.getNumber() != ''){phoneNumbers.push(phoneInput0.getNumber())};
@@ -138,17 +128,10 @@ function update_json(initialJSON){
     // get_branch
     for (i = 0; i < updatedJSON.states.length; i++){
         if (updatedJSON.states[i].name == "get_branch"){
-            updatedJSON.states[i].properties.say = "For the following options, you may reach the desired extension by saying or pressing the corresponding number on the phone keypad. " +
-                "For " + branch0 + ", say or press 0. " +
-                "For " + branch1 + ", say or press 1. " +
-                "For " + branch2 + ", say or press 2. " +
-                "For " + branch3 + ", say or press 3. " +
-                "For " + branch4 + ", say or press 4. " +
-                "For " + branch5 + ", say or press 5. " +
-                "For " + branch6 + ", say or press 6. " +
-                "For " + branch7 + ", say or press 7. " +
-                "For " + branch8 + ", say or press 8. " +
-                "For " + branch9 + ", say or press 9. ";
+            updatedJSON.states[i].properties.say = "For the following options, you may reach the desired extension by saying or pressing the corresponding number on the phone keypad. ";
+            for (j = 0; j < branchNum; j++){
+                updatedJSON.states[i].properties.say += "For " + document.querySelector("input[id='branch" + j + "']").value + ", say or press " + j + ". ";
+            }
         }
     }
     // key_input_check_branch
