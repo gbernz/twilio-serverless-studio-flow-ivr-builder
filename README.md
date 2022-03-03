@@ -31,6 +31,8 @@ twilio plugins:install @twilio-labs/plugin-serverless
 ```
 # Clone this repository
 git clone https://github.com/gbernz/twilio-serverless-studio-flow-ivr-builder
+```
+```
 # Go into the repository
 cd twilio-serverless-studio-flow-ivr-builder
 ```
