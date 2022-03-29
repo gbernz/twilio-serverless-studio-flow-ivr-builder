@@ -3,6 +3,8 @@
 
 Quickly customize a Studio Flow IVR (phone tree) via JSON or the pre-built UI. Take it a step further by utilizing the optional Studio Flow REST API v2 to push your custom flow to the Twilio Console. Navigation of the IVR includes use of keys and speech-to-text.
 
+Here is a live example: [Live Robo Rosi Link](https://roborosi-2112.twil.io/index.html)
+
 ## Pre-requisites
 
 ### Environment variables
@@ -63,4 +65,4 @@ This project was an internal Twilio effort for the FY22 H1 Growth Build Challeng
 
 Twilion builders:
 
-[@sjohnson](https://google.com/) [@asaulnier](https://google.com/) [@gbernard](https://google.com/) [@cmurphy](https://google.com/)
+[@sjohnson](https://www.linkedin.com/in/sarahevelynn/) [@asaulnier](https://www.linkedin.com/in/adamsaulnier/) [@gbernard](https://www.linkedin.com/in/gradybernard/) [@cmurphy](https://www.linkedin.com/in/caitlinadian/)
